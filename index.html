@@ -27,12 +27,12 @@
 
     <script>
         const coor = [6.0414871153222895, 116.12465479443016];
+        let busCoord= [6.036882734264042, 116.1216452371031];
         const style= {radius: 200, fill: false, opacity: 1, weight: 10, interactive: false};
-        var map = L.map('map').setView(coor, 15);
+        var map = L.map('map').setView(busCoord, 18);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution:  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
-        let busCoord= [6.036882734264042, 116.1216452371031];
 
         // const myIcon = L.icon({
         //     iconUrl: 'bus.png',
@@ -49,7 +49,7 @@
         // you can set .my-div-icon styles in CSS
 
         L.marker(busCoord, {icon: myIcon}).addTo(map);
-        L.circle(busCoord).addTo(map);
+        // L.circle(busCoord).addTo(map);
         // L.Routing.control({
         //   waypoints: [
         //     L.latLng(6.038536978708779, 116.1235926110215),
